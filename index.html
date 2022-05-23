@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing Page |Dannys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Landing Page</a>
+      <div class="menu-btn"></div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="file.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="file2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="file3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="file4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="file5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Dinosaurus.<br><span>Air</span></h1>
+        <p>Spinosaurus merupakan dinosaurus terbesar dari anggota Spinosaurida. Spinosaurus juga merupakan satu dari tiga Theropoda terbesar sepanjang masa, yang hidup di daerah yang kini bisa dikenali sebagai Afrika bagian Utara. Spinosaurus cukup terkenal saat ini, karena ukurannya mengalahkan spinosaurus dan Mapusaurus.</p>
+        <a href="https://id.m.wikipedia.org/wiki/Spinosaurus">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Dinosaurus.<br><span>T-REX</span></h1>
+        <p>Dinosaurus adalah kelompok hewan purbakala dari klad Dinosauria. Dinosaurus pertama kali muncul pada periode Trias, sekitar 230 juta tahun yang lalu, dan merupakan Vertebrata dominan selama 135 juta tahun, yang dimulai sejak periode Jura (sekitar 201 juta tahun yang lalu) hingga berakhirnya periode Kapur (65 juta tahun yang lalu), dan kemudian musnah akibat peristiwa kepunahan Kapur-Paleogen sebelum Era Mesozoikum. </p>
+        <a href="https://id.m.wikipedia.org/wiki/Dinosaurus">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Pantai.<br><span></span></h1>
+        <p>pantai merupakan daerah yang menjadi perbatasan antara lautan dan daratan secara langsung. Pantai terlihat seperti membentuk garis yang bersifat khayal sebagai penanda antara lautan dan daratan.</p>
+        <a href="https://id.m.wikipedia.org/wiki/Pantai">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Senja.<br><span></span></h1>
+        <p>Senja adalah bagian waktu dalam hari atau keadaan setengah gelap di bumi sesudah matahari terbenam, ketika piringan matahari secara keseluruhan telah hilang dari cakrawala.</p>
+        <a href="https://id.m.wikipedia.org/wiki/Senja">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Awan.<br><span>Relax</span></h1>
+        <p>Awan adalah massa yang dapat dilihat dari tetesan air atau kristal beku yang menggantung di atmosfer yang berada di atas permukaan bumi atau permukaan planet lain.</p>
+        <a href="https://id.m.wikipedia.org/wiki/Awan">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/dannys.muhammad.9"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/d.mf12"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/dozkycrz"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
